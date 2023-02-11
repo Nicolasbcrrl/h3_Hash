@@ -25,7 +25,7 @@ DAC : data authentication code
 
 ### Sources
 
-[CHAPTER 2 : Protocol Building Blocks](https://learning.oreilly.com/library/view/applied-cryptography-protocols/9781119096726/10_chap02.html#chap02)
+[ Applied Cryptography, chapter 2 : Protocol Building Blocks](https://learning.oreilly.com/library/view/applied-cryptography-protocols/9781119096726/10_chap02.html#chap02)
 
 -----
 ## Install Hashcat
