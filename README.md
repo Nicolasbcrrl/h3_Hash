@@ -21,6 +21,7 @@
 - **MAC** and **DAC** are one-way hash functions to which the encryption key is added to the pre-image. This way, only the desired person can check the hash value.
 
 MAC : Message Authentication Codes A message authentication code
+
 DAC : data authentication code
 
 ### Sources
