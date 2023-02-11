@@ -18,7 +18,7 @@
 - The hash of a pre-image can also be used to ensure the authenticity of a copy of the original pre-image. To do this, the user will only have to compare the two hashes. If there is a difference it means that the copy may have been modified. So it would be potentially less secure.
 - It is almost impossible to generate the same hash for two different images. 
 - Changing a single bit in the original pre-image completely changes the hash.
-- MAC** and DAC** are one-way hash functions to which the encryption key is added to the pre-image. This way, only the desired person can check the hash value.
+- **MAC** and **DAC** are one-way hash functions to which the encryption key is added to the pre-image. This way, only the desired person can check the hash value.
 
 MAC : Message Authentication Codes A message authentication code
 DAC : data authentication code
