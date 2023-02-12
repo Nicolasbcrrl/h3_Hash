@@ -96,7 +96,7 @@ To crack the hash **8eb8e307a6d649bc7fb51443a06a216f**, I performed the followin
 
     $ hashcat -m 0 '8eb8e307a6d649bc7fb51443a06a216f' rockyou.txt -o h3Solved.txt
     
->hashcat m'a retourner comme résultat **"february"**. Pour être sûr que c'est bien la bonne solution, j'ai hashé **"february"** avec MD5 et j'ai comparé les deux résultat. J'ai finalement trouvé que **"february"** était la bonne réponse.
+>hashcat returned "february". To make sure it was the right answer, I hashed "february" with MD5 and compared the two results. I finally found that "february" was the correct answer.
 
 ![hash](hash_solved.PNG)
 
