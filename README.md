@@ -107,6 +107,20 @@ To crack the hash **8eb8e307a6d649bc7fb51443a06a216f**, I performed the followin
 ------
 
 ## Installation of John the Ripper
+
+To install Jumbo on my virtual machine, I followed the tutorial [Crack File Password With John](https://terokarvinen.com/2023/crack-file-password-with-john/) available on the website [terokarvinen.com](https://terokarvinen.com/). 
+
+Before starting any kind of process on your Linux, you should check if your packages are up to date. To do this you can use the following command:
+
+    $ sudo apt-get update
+    
+If after using the command you see that you need to update your packages, you can use this command: 
+
+    $ sudo apt-get upgrade
+    
+L'installation de Jombo, la version open source de John the ripper, demande certain prerequis pour permettre l'installation et l'utilisation du logiciel. comme l'explilque le tableau ci-dessus tirer du [tutoriel](https://terokarvinen.com/2023/crack-file-password-with-john/).
+
+
 ### Sources
 ------
 ## Zip file password cracking
