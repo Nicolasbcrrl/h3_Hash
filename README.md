@@ -74,17 +74,17 @@ Finally, you can delete the zip or save it. If you want to delete it, you can us
 
 ## Hash Cracking
 
-Pour cracker le hash **8eb8e307a6d649bc7fb51443a06a216f**, j'ai effectuer les étapes suivantes : 
+To crack the hash **8eb8e307a6d649bc7fb51443a06a216f**, I performed the following steps : 
 
-1. Je me suis rendu sur le répertoir **hashed/**. 
+>I went to the **hashed/** directory. 
 
     $ cd hashed/
 
-2. J'ai créé un fichier texte que j'ai nommé **h3Hash.txt**. Ce fichier va contenir le hash que je dois cracker.
+>I have created a text file that I have named **h3Hash.txt**. This file will contain the hash I need to crack.
 
     $ nano h3Hash.txt
     
-3. J'ai utilisé **hashid** pour trouver le numéro d'identification des différent type de hash. 
+>I used **hashid** to find the ID number of the different hash types. 
 
     $ hashid -m 8eb8e307a6d649bc7fb51443a06a216f
     
@@ -92,16 +92,20 @@ Pour cracker le hash **8eb8e307a6d649bc7fb51443a06a216f**, j'ai effectuer les é
     
     $ hashid -m h3Hash.txt
    
-4. J'ai ensuite commencer le creacking en utilisant l'outil **hashcat** et le type de hash le plus commun **MD5** qui pour code **0**. Comme dictionnaire, j'ai utilisé le fichier texte **rockyou.txt**. En cas de réussite, j'ai indiqué à hashcat de sauvegarder la solution dans le fichier texte **h3Solved.txt"".
+>I then started creacking using the **hashcat** tool and the most common hash type **MD5** which is code for **0**. As a dictionary I used the text file **rockyou.txt**. If successful, I told hashcat to save the solution in the text file **"h3Solved.txt"**.
 
     $ hashcat -m 0 '8eb8e307a6d649bc7fb51443a06a216f' rockyou.txt -o h3Solved.txt
     
-5. hashcat m'a retourner comme résultat **"february"**. Pour être sûr que c'est bien la bonne solution, j'ai hashé **"february"** avec MD5 et j'ai comparé les deux résultat. J'ai finalement trouvé que **"february"** était la bonne réponse.
+>hashcat m'a retourner comme résultat **"february"**. Pour être sûr que c'est bien la bonne solution, j'ai hashé **"february"** avec MD5 et j'ai comparé les deux résultat. J'ai finalement trouvé que **"february"** était la bonne réponse.
 
 ![hash](hash_solved.PNG)
 
 ### Sources
+
+[Cracking Passwords wit Hashcat](https://terokarvinen.com/2022/cracking-passwords-with-hashcat/)
+
 ------
+
 ## Installation of John the Ripper
 ### Sources
 ------
