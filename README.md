@@ -74,8 +74,29 @@ Finally, you can delete the zip or save it. If you want to delete it, you can us
 
 ## Hash Cracking
 
+Pour cracker le hash **8eb8e307a6d649bc7fb51443a06a216f**, j'ai effectuer les étapes suivantes : 
 
+1. Je me suis rendu sur le répertoir **hashed/**. 
 
+    $ cd hashed/
+
+2. J'ai créé un fichier texte que j'ai nommé **h3Hash.txt**. Ce fichier va contenir le hash que je dois cracker.
+
+    $ nano h3Hash.txt
+    
+3. J'ai utilisé **hashid** pour trouver le numéro d'identification des différent type de hash. 
+
+    $ hashid -m 8eb8e307a6d649bc7fb51443a06a216f
+    
+    or 
+    
+    $ hashid -m h3Hash.txt
+   
+4. J'ai ensuite commencer le creacking en utilisant l'outil **hashcat** et le type de hash le plus commun **MD5** qui pour code **0**. Comme dictionnaire, j'ai utilisé le fichier texte **rockyou.txt**. En cas de réussite, j'ai indiqué à hashcat de sauvegarder la solution dans le fichier texte **h3Solved.txt"".
+
+    $ hashcat -m 0 '8eb8e307a6d649bc7fb51443a06a216f' rockyou.txt -o h3Solved.txt
+    
+5. hashcat m'a retourner comme résultat **"february"**. Pour être sûr que c'est bien la bonne solution, j'ai hashé **"february"** avec MD5 et j'ai comparé les deux résultat. 
 ### Sources
 ------
 ## Installation of John the Ripper
