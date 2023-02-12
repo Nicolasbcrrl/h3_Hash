@@ -120,6 +120,24 @@ If after using the command you see that you need to update your packages, you ca
     
 L'installation de Jombo, la version open source de John the ripper, demande certain prerequis pour permettre l'installation et l'utilisation du logiciel. comme l'explilque le tableau ci-dessus tirer du [tutoriel](https://terokarvinen.com/2023/crack-file-password-with-john/).
 
+![tab.PNG](tab.PNG)
+
+Por intaller l'ensemeble de ces pakage, vous pouvez effectuer la commande ci-dessous : 
+
+    $ sudo apt-get -y install micro bash-completion git build-essential libssl-dev zlib1g zlib1g-dev zlib-gst libbz2-1.0 libbz2-dev atool zip wget
+    
+Après l'installation des prèrequis, il nous faut installer la version Jumbo de John the Ripper. Pour cela vous pouver effectuer la commande suivante, qui va vous permettre de le télécharger. 
+
+    $ git clone --depth=1 https://github.com/openwall/john.git
+
+Ensuite avec la commande **cd** vous allez vous dirigier dans le répertoir qui a été créé lors de l'exécution de la dernière commande.
+
+    $ cd john/src/
+    
+Lorsque vous vous situez dans le répertoir, vous pouvez lancer la compilation à l'aide de la commande ci-dessous :
+ 
+    $ ./configure
+    $ make -s clean && make -sj4
 
 ### Sources
 ------
