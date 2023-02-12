@@ -96,7 +96,10 @@ Pour cracker le hash **8eb8e307a6d649bc7fb51443a06a216f**, j'ai effectuer les é
 
     $ hashcat -m 0 '8eb8e307a6d649bc7fb51443a06a216f' rockyou.txt -o h3Solved.txt
     
-5. hashcat m'a retourner comme résultat **"february"**. Pour être sûr que c'est bien la bonne solution, j'ai hashé **"february"** avec MD5 et j'ai comparé les deux résultat. 
+5. hashcat m'a retourner comme résultat **"february"**. Pour être sûr que c'est bien la bonne solution, j'ai hashé **"february"** avec MD5 et j'ai comparé les deux résultat. J'ai finalement trouvé que **"february"** était la bonne réponse.
+
+![hash](hash_solved.PNG)
+
 ### Sources
 ------
 ## Installation of John the Ripper
