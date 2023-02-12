@@ -29,10 +29,53 @@ DAC : data authentication code
 [ Applied Cryptography, chapter 2 : Protocol Building Blocks](https://learning.oreilly.com/library/view/applied-cryptography-protocols/9781119096726/10_chap02.html#chap02)
 
 -----
+
 ## Install Hashcat
+
+To install Hashcat on my virtual machine, I followed the tutorial [Cracking Passwords wit Hashcat](https://terokarvinen.com/2022/cracking-passwords-with-hashcat/) available on the website [terokarvinen.com](https://terokarvinen.com/). 
+
+Before starting any kind of process on your Linux, you should check if your packages are up to date. To do this you can use the following command:
+
+    $ sudo apt-get update
+    
+If after using the command you see that you need to update your packages, you can use this command: 
+
+    $ sudo apt-get upgrade
+
+Now that your machine is up to date, we can start installing **Hashcat**. To do this you need to run the following command which will allow the installation to proceed:
+
+    $ sudo apt-get -y install hashid hashcat wget
+    
+Next you will need to create a directory that will contain the hashes you wish to solve and the dictionary(s) you are using.
+
+    $ mkdir hashed
+ 
+You will now go to the new directory named **"hashed"** that you just created. To do this you will use the following command:
+
+    $ cd hashed
+    
+To be able to start cracking **hash** you need a big dictionary with lots of passwords. For this there is the file **"rockyou.txt"** which can be found on Github and downloaded. You can use the following command to clone the Github repository in the directory you have created:
+
+    $ wget https://github.com/danielmiessler/SecLists/raw/master/Passwords/Leaked-Databases/rockyou.txt.tar.gz
+    
+Then you have to unzip it with the following command: 
+
+    $ tar xf rockyou.txt.tar.gz
+
+Finally, you can delete the zip or save it. If you want to delete it, you can use the following command: 
+
+    $ rm rockyou.txt.tar.gz
+
 ### Source
+
+[Cracking Passwords wit Hashcat](https://terokarvinen.com/2022/cracking-passwords-with-hashcat/)
+
 -----
+
 ## Hash Cracking
+
+
+
 ### Sources
 ------
 ## Installation of John the Ripper
