@@ -144,7 +144,11 @@ Finalement, vous pourrez lancer l'application en utilisant la commande suivante 
     $ /home/[user]/john/run/john
 
 ### Sources
+
+[terokarvinen.com](https://terokarvinen.com/2023/crack-file-password-with-john/)
+
 ------
+
 ## Zip file password cracking
 
 Dans cette partie je vais montrer les étapes que j'ai faite pour cracker un fichier zip protéger. Pour commencer, je me suis rendu sur le tutoriel **"Crack File Password With John"** disponible sur le site [terokarvinen.com](https://terokarvinen.com/2023/crack-file-password-with-john/). J'ai ensuite télécharger le fichier zip **tero.zip** dans mon **home directory**.
@@ -167,4 +171,8 @@ Cette commande m'a permis de cracker instantanement le mots de passe du fichier 
 
 
 ### Sources
+
+[www.hivesystems.io](https://www.hivesystems.io/blog/are-your-passwords-in-the-green)
+
+[terokarvinen.com](https://terokarvinen.com/2023/crack-file-password-with-john/)
 ------
