@@ -138,6 +138,10 @@ Lorsque vous vous situez dans le r√©pertoir, vous pouvez lancer la compilation √
  
     $ ./configure
     $ make -s clean && make -sj4
+    
+Finalement, vous pourrez lancer l'application en utilisant la commande suivante :
+
+    $ /home/[user]/john/run/john
 
 ### Sources
 ------
