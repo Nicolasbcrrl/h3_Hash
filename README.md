@@ -146,5 +146,24 @@ Finalement, vous pourrez lancer l'application en utilisant la commande suivante 
 ### Sources
 ------
 ## Zip file password cracking
+
+Dans cette partie je vais montrer les étapes que j'ai faite pour cracker un fichier zip protéger. Pour commencer, je me suis rendu sur le tutoriel **"Crack File Password With John"** disponible sur le site [terokarvinen.com](https://terokarvinen.com/2023/crack-file-password-with-john/). J'ai ensuite télécharger le fichier zip **tero.zip** dans mon **home directory**.
+
+    $ wget https://TeroKarvinen.com/2023/crack-file-password-with-john/tero.zip
+    
+Etant dans l'incapacité d'extraire les données du zip du fait de mon ingnorance du mots de passe, j'ai donc commencé les manipulation pour cracker le mots de passse avec l'application John the Ripper.
+
+Pour cela j'ai d'abord extrait le hash du zip et je l'ai copier dans un nouveau fichier.
+
+    $ /home/nicolas/john/run/zip2john tero.zip > tero.zip.hash
+    
+Ensuite j'ai lancer la procedure de crackage du hash avec la commande suivante : 
+
+    $ /home/nicolas/john/run/john tero.zip.hash
+    
+Cette commande m'a permis de cracker instantanement le mots de passe du fichier zip. J'ai trouvé comme mot de passe **butterfly**. La vitesse du crackage s'explique par la faiblesse du mots de passe utilisé. Il ne comporte ni majuscule, chiffre et caractère spécial, ce qui rend le crackage instantané. Comme le montre le tableau ci-dessous.
+
+
+
 ### Sources
 ------
