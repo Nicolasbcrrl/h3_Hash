@@ -1,4 +1,4 @@
-# h3_Hash
+# h4_Hash
 ## Applied Cryptography
 
 ### 2.3 One-Way Functions
