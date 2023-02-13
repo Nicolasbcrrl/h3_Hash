@@ -118,28 +118,28 @@ If after using the command you see that you need to update your packages, you ca
 
     $ sudo apt-get upgrade
     
-L'installation de Jombo, la version open source de John the ripper, demande certain prerequis pour permettre l'installation et l'utilisation du logiciel. comme l'explilque le tableau ci-dessus tirer du [tutoriel](https://terokarvinen.com/2023/crack-file-password-with-john/).
+The installation of Jombo, the open source version of John the ripper, requires certain prerequisites to enable the installation and use of the software. As explained in the table above from this [tutoriel](https://terokarvinen.com/2023/crack-file-password-with-john/).
 
 ![tab.PNG](tab.PNG)
 
-Por intaller l'ensemeble de ces pakage, vous pouvez effectuer la commande ci-dessous : 
+To install these pakages, you can do the following command : 
 
     $ sudo apt-get -y install micro bash-completion git build-essential libssl-dev zlib1g zlib1g-dev zlib-gst libbz2-1.0 libbz2-dev atool zip wget
     
-Après l'installation des prèrequis, il nous faut installer la version Jumbo de John the Ripper. Pour cela vous pouver effectuer la commande suivante, qui va vous permettre de le télécharger. 
+After installing the prerequisites, we need to install the Jumbo version of John the Ripper. To do this you can run the following command, which will allow you to download it. 
 
     $ git clone --depth=1 https://github.com/openwall/john.git
 
-Ensuite avec la commande **cd** vous allez vous dirigier dans le répertoir qui a été créé lors de l'exécution de la dernière commande.
+Then with the **cd** command you will go to the directory that was created when the last command was executed.
 
     $ cd john/src/
     
-Lorsque vous vous situez dans le répertoir, vous pouvez lancer la compilation à l'aide de la commande ci-dessous :
+When you are in the directory, you can start the compilation with the command below :
  
     $ ./configure
     $ make -s clean && make -sj4
     
-Finalement, vous pourrez lancer l'application en utilisant la commande suivante :
+Finally, you can launch the application using the following command :
 
     $ /home/[user]/john/run/john
 
@@ -151,21 +151,21 @@ Finalement, vous pourrez lancer l'application en utilisant la commande suivante 
 
 ## Zip file password cracking
 
-Dans cette partie je vais montrer les étapes que j'ai faite pour cracker un fichier zip protéger. Pour commencer, je me suis rendu sur le tutoriel **"Crack File Password With John"** disponible sur le site [terokarvinen.com](https://terokarvinen.com/2023/crack-file-password-with-john/). J'ai ensuite télécharger le fichier zip **tero.zip** dans mon **home directory**.
+In this section I will show the steps I took to crack a protected zip file. To start, I went to the tutorial **"Crack File Password With John"** available at [terokarvinen.com](https://terokarvinen.com/2023/crack-file-password-with-john/). Then I downloaded the zip file  **tero.zip** in my **home directory**.
 
     $ wget https://TeroKarvinen.com/2023/crack-file-password-with-john/tero.zip
     
-Etant dans l'incapacité d'extraire les données du zip du fait de mon ingnorance du mots de passe, j'ai donc commencé les manipulation pour cracker le mots de passse avec l'application John the Ripper.
+Being unable to extract the data from the zip because of the password, I started the manipulation to crack the password with the application John the Ripper.
 
-Pour cela j'ai d'abord extrait le hash du zip et je l'ai copier dans un nouveau fichier.
+To do this I first extracted the hash from the zip and copied it to a new file.
 
     $ /home/nicolas/john/run/zip2john tero.zip > tero.zip.hash
     
-Ensuite j'ai lancer la procedure de crackage du hash avec la commande suivante : 
+Then I launched the hash cracking procedure with the following command: 
 
     $ /home/nicolas/john/run/john tero.zip.hash
     
-Cette commande m'a permis de cracker instantanement le mots de passe du fichier zip. J'ai trouvé comme mot de passe **butterfly**. La vitesse du crackage s'explique par la faiblesse du mots de passe utilisé. Il ne comporte ni majuscule, chiffre et caractère spécial, ce qui rend le crackage instantané. Comme le montre le tableau ci-dessous.
+This command allowed me to instantly crack the password of the zip file. I found the password **butterfly**. The speed of the cracking is explained by the weakness of the password used. It has no capital letters, numbers or special characters, which makes the cracking instantaneous. As shown in the table below.
 
 ![pwd](Hive+Systems+Password+Table.png)
 
@@ -175,4 +175,5 @@ Cette commande m'a permis de cracker instantanement le mots de passe du fichier 
 [www.hivesystems.io](https://www.hivesystems.io/blog/are-your-passwords-in-the-green)
 
 [terokarvinen.com](https://terokarvinen.com/2023/crack-file-password-with-john/)
+
 ------
