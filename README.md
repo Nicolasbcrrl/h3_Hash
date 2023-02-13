@@ -163,6 +163,7 @@ Ensuite j'ai lancer la procedure de crackage du hash avec la commande suivante :
     
 Cette commande m'a permis de cracker instantanement le mots de passe du fichier zip. J'ai trouvé comme mot de passe **butterfly**. La vitesse du crackage s'explique par la faiblesse du mots de passe utilisé. Il ne comporte ni majuscule, chiffre et caractère spécial, ce qui rend le crackage instantané. Comme le montre le tableau ci-dessous.
 
+![pwd](Hive+Systems+Password+Table.png)
 
 
 ### Sources
